@@ -21,7 +21,7 @@ function downloadImage(image) {
     })
     .catch(error => {
       console.error(error.message);
-      return null;
+      return null; 
     });
 }
 
@@ -34,6 +34,8 @@ function displayImages(imageUrls) {
       img.alt = 'Downloaded Image';
       img.style.margin = '10px';
       output.appendChild(img);
+    } else {
+      console.warn('An image failed to load and will not be displayed.');
     }
   });
 }
